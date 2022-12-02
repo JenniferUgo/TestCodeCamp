@@ -125,7 +125,7 @@ public class SeleniumWebBlogTest {
           // 5. Locate the username field and Input your username
           driver.findElement(By.name("user[username]")).sendKeys("Jennee1");
           //6. Locate the email address field and Input your email address
-          driver.findElement(By.name("user[email]")).sendKeys("jennee30@testemail.com");
+          driver.findElement(By.name("user[email]")).sendKeys("jennee0@testemail.com");
           //7. Locate the password field and Input your password
           driver.findElement(By.name("user[password]")).sendKeys("p");
           //8. Click on the SignUp button to submit
@@ -189,9 +189,9 @@ public class SeleniumWebBlogTest {
                driver.navigate().to(signUpPage);
           }
                    //5. Locate the username field and Input your username
-          driver.findElement(By.name("user[username]")).sendKeys("Jennee47");
+          driver.findElement(By.name("user[username]")).sendKeys("Jennee56");
                   //6. Locate the email address field and Input your email address
-          driver.findElement(By.name("user[email]")).sendKeys("jennee37@testemail.com");
+          driver.findElement(By.name("user[email]")).sendKeys("jennee46@testemail.com");
                   //7. Locate the password field and Input your password
           driver.findElement(By.name("user[password]")).sendKeys("testpassword");
                  //8. Click on the SignUp button to submit
@@ -221,6 +221,7 @@ public class SeleniumWebBlogTest {
           else
                //fail
                System.out.println("Wrong Webpage");
+          user1Item.click();
           Thread.sleep(5000);
      }
 
@@ -229,15 +230,15 @@ public class SeleniumWebBlogTest {
           //10. Search for an element (Learn Xpath) and confirm that it's present
           WebElement searchedItem = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/div[1]/a"));
 
-          //Test 9.Verify that the item searched for on the User1 page is present.
+          //Test 9.Verify that the item searched for is present.
           String expectedItemName = "Learn XPath";
           String actualItemName = searchedItem.getText();
           if (expectedItemName.equals(actualItemName)) {
-               System.out.println("Item searched for is present");
+               System.out.println("Searched item is present");
           } else {
-               System.out.println("Item searched for is not present");
+               System.out.println("Searched item is not present");
           }
-          //Click on the search Item to view its content
+          //Click on the searched Item to view its content
           searchedItem.click();
           Thread.sleep(5000);
      }
